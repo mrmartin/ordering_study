@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta property="og:image" content="/st/og-image.png"/>
+
+	<title>Texture Perception Experiment</title>
+
+	<meta name="keywords" content="sortable, reorder, list, javascript, html5, drag and drop, dnd, animation, groups, angular, ng-sortable, react, mixin, effects, rubaxa"/>
+	<meta name="description" content="Sortable - is a minimalist JavaScript library for reorderable drag-and-drop lists on modern browsers and touch devices. No jQuery. Supports Meteor, AngularJS, React and any CSS library, e.g. Bootstrap."/>
+	<meta name="viewport" content="width=device-width, initial-scale=0.5"/>
+
+	<link href="//rubaxa.github.io/Ply/ply.css" rel="stylesheet" type="text/css"/>
+	<link href="//fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet" type="text/css"/>
+
+	<link href="st/app.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery-1.12.3.min.js"></script>
+	
+	<style>
+	#rightImage
+	{
+	    float:left;
+	    position:relative;
+	    /*box-shadow:2px -2px 10px 3px #888, inset 2px -2px 10px 3px #888;*/
+	}
+	#rightImage:hover img
+	{
+	    height: 900px;
+	    width: 600px;
+	    /*box-shadow:4px -4px 10px 3px #888, inset 4px -4px 10px 3px #888;*/
+	}
+	 </style>
+<style type="text/css">.img-wrapper {
+    display: inline-block;
+    overflow: hidden;
+}
+		</style>
+</head>
+<body>
+	
+		<div class="container">
+		<div style="padding: 10px 50px 0; height: 130px;">
+			<h1 data-force="20" data-force-y="2.5">Sort the bottom images by order of realism (Drag and Drop, then press Submit)</h1>
+                        <h1 data-force="20" data-force-y="2.5">Order the bottom row from left to right according to how similar to the reference you think they are.</h1>
+		</div>
+	</div>
+	<center>
+		Reference<br/>
+<img  width="6%" src="exemplar/smarties.png"/></center>
+
+        <div width="100%">
+        <img style="position: relative; top: -250px;" src="worst.png" align="right" />
+        <img style="position: relative; top: -250px;" src="best.png" align="left" />
+        </div>
+
+<br/><br/><br/>
+	<!-- Connected lists -->
+	<div class="container" width="100%">
+		<div data-force="100" class="block" vertical-align="middle">
+			<form id="myForm" action="submit.php" method="post">
+			<ul id="foo" class="block__list_tags">
+				<input type="hidden" id="window_width" name="window_width" value="-1">
+				<input type="hidden" id="window_height" name="window_height" value="-1">
+				<input type="hidden" id="document_width" name="document_width" value="-1">
+				<input type="hidden" id="document_height" name="document_height" value="-1">
+				<input type="hidden" id="screen_width" name="screen_width" value="-1">
+				<input type="hidden" id="screen_height" name="screen_height" value="-1">
+				<input type="hidden" id="texture" value="smarties.png">
+	<li><input type="hidden" name="method1" value="1Sykora"><img class="form" width="100%" src="Sykora/smarties.png"/></li>
+	<li><input type="hidden" name="method2" value="2reference_output"><img class="form" width="100%" src="reference_output/smarties.png"/></li>
+	<li><input type="hidden" name="method3" value="3quilting"><img class="form" width="100%" src="quilting/smarties.png"/></li>
+	<li><input type="hidden" name="method4" value="4self_tuning"><img class="form" width="100%" src="self_tuning/smarties.png"/></li>
+	<li><input type="hidden" name="method5" value="5Ashikhmin"><img class="form" width="100%" src="Ashikhmin/smarties.png"/></li>
+        <li><input type="hidden" name="method6" value="6resynthesizer"><img class="form" width="100%" src="resynthesizer/smarties.png"/></li>
+        <li><input type="hidden" name="method7" value="7CNNMRF"><img class="form" width="100%" src="CNNMRF/smarties.png"/></li>
+			</ul>
+			<input type="submit" value="Submit">
+<b>                        Image 1 out of 12</b>
+			</form>
+		</div>
+	</div>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>&nbsp;
+<script type="text/javascript">
+
+$(document).ready(function(){
+ $("#window_width").val($(window).width());   // returns width of browser viewport
+ $("#window_height").val($(window).height());   // returns height of browser viewport
+ $("#document_width").val($(document).width()); // returns width of HTML document
+ $("#document_height").val($(document).height()); // returns height of HTML document
+ $("#screen_width").val(screen.width); // returns width of HTML document
+ $("#screen_height").val(screen.height); // returns height of HTML document
+});
+
+$( window ).resize(function() {
+ $("#window_width").val($(window).width());   // returns width of browser viewport
+ $("#window_height").val($(window).height());   // returns height of browser viewport
+ $("#document_width").val($(document).width()); // returns width of HTML document
+ $("#document_height").val($(document).height()); // returns height of HTML document
+ $("#screen_width").val(screen.width); // returns width of HTML document
+ $("#screen_height").val(screen.height); // returns height of HTML document
+});
+
+</script>
+	<script src="Sortable.js"></script>
+	<script src="//rubaxa.github.io/Ply/Ply.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	<script src="ng-sortable.js"></script>
+
+	<script src="st/app.js"></script>
+
+	<script src="//yandex.st/highlightjs/7.5/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
