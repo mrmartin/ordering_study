@@ -33,7 +33,7 @@ sed 's/[0-9-]* [0-9:]* [a-z0-9]* [0-9]* [0-9]* [0-9]* [0-9]* [0-9]* [0-9]* //g' 
 sed 's/[0-9-]* [0-9:]* [a-z0-9]* [0-9]* [0-9]* [0-9]* [0-9]* [0-9]* [0-9]* //g' anonymised_data.txt | sed 's/[0-9]reference_output/1/g' | sed 's/[0-9]quilting/2/g' | sed 's/[0-9]resynthesizer/3/g' | sed 's/[0-9]self_tuning/4/g' | sed 's/[0-9]Sykora/5/g' | sed 's/[0-9]Ashikhmin/6/g' | sed 's/[0-9]CNNMRF/7/g' > output_order_numeral.txt
 
 #convert output_order_numeral.txt to output_order_by_locations.csv using MATLAB:
-/Applications/MATLAB_R2014b.app/bin/matlab -nodisplay -nojvm -r "A=csvread('../../Experiments/texture_experiment_analysis/output_order_numeral.txt');A(A(:,1)==54,3:end)=A(A(:,1)==54,end:-1:3);A(A(:,1)==59,:)=[];A(A(:,1)==35,:)=[];A(A(:,1)==16,:)=[];A(A(:,1)==6,:)=[];[Y,I]=sort(A(:,3:end),2);csvwrite('../../Experiments/texture_experiment_analysis/output_order_by_locations.csv',[A(:,1:2) I]);csvwrite('../../Experiments/texture_experiment_analysis/output_order_all_textures_one_row.csv',[[1:size(I,1)/12]' reshape(I(:,:)',[84 size(I,1)/12])']);csvwrite('means.csv',mean(reshape(I(:,:)',[84 size(I,1)/12])'));exit"
+/Applications/MATLAB_R2014b.app/bin/matlab -nodisplay -nojvm -r "A=csvread('output_order_numeral.txt');A(A(:,1)==54,3:end)=A(A(:,1)==54,end:-1:3);A(A(:,1)==59,:)=[];A(A(:,1)==35,:)=[];A(A(:,1)==16,:)=[];A(A(:,1)==6,:)=[];[Y,I]=sort(A(:,3:end),2);csvwrite('output_order_by_locations.csv',[A(:,1:2) I]);csvwrite('output_order_all_textures_one_row.csv',[[1:size(I,1)/12]' reshape(I(:,:)',[84 size(I,1)/12])']);csvwrite('means.csv',mean(reshape(I(:,:)',[84 size(I,1)/12])'));exit"
 
 #deprecated, done in MATLAB:
 #sed '59d' output_order_all_textures_one_row.csv | sed '54d' | sed '35d' | sed '16d' | sed '6d' > tmp
