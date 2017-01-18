@@ -1,0 +1,13 @@
+Texture, Historic, Regular color, irregular shape, Irregular color, regular shape, Multi-scale, Global variance, Overlapping multiple textures, Color 
+blades, true, false, false, false, false, false, true 
+grid, true, false, false, false, false, false, false 
+pebbles, true, true, false, false, false, false, false 
+rough, true, false, false, false, false, false, true 
+orange marble, false, false, false, false, false, false, true 
+green marble, false, false, false, false, true, false, true 
+straw, true, false, false, false, false, false, false 
+chicago, false, false, true, true, true, true, true 
+ink, false, true, false, false, false, false, true 
+smarties, false, false, true, false, false, true, true 
+checkerboard, true, false, false, false, false, false, false 
+noise, true, true, false, false, false, false, false 

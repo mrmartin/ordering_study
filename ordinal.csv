@@ -1,0 +1,13 @@
+Texture, Scale, Stochasticity, Stationarity, Locality, Flow-guided, Shape variance, Colour variance, Natural, Absolute texel size, Texels per sample, A-score, G-score, Scale variance, Rotation, Example resolution 
+blades, low, high, low, high, mid, high, low, high, mid, high, X, X, low, high, mid 
+grid, mid, low, high, low, low, low, low, low, low, mid, low, high, low, low, mid 
+pebbles, high, mid, mid, mid, low, mid, low, high, low, low, X, X, high, high, mid 
+rough, low, low, mid, high, low, low, low, mid, low, high, X, X, low, mid, mid 
+orange marble, high, high, mid, mid, mid, high, mid, high, high, low, X, X, mid, high, high 
+green marble, high, high, mid, high, high, high, mid, high, mid, low, X, X, high, mid, mid 
+straw, high, mid, high, low, mid, high, mid, mid, low, low, mid, mid, low, mid, low 
+chicago, X, mid, high, high, mid, mid, high, mid, X, mid, low, mid, low, low, high 
+ink, mid, high, low, low, high, high, mid, low, mid, mid, X, X, mid, high, mid 
+smarties, mid, mid, low, high, low, mid, high, mid, high, low, X, X, low, low, high 
+checkerboard, high, low, high, mid, low, low, low, low, high, low, high, high, low, low, low 
+noise, low, high, low, low, low, high, low, low, low, high, X, X, low, low, mid 
