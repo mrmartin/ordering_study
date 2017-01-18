@@ -34,3 +34,6 @@ Along with the web interface, this repository contains supplementary material of
   6. resynthesizer
 4. raw user responses
   * user study ranks.csv
+5. texture property tables
+  1. binary.csv and binary.xlsx
+  2. ordinal.csv and ordinal.xlsx
