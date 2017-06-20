@@ -19,7 +19,7 @@ The script contains experiment-specific tuning, for example reversing user #54 w
 
 ## Supplementary Material
 
-Along with the web interface, this repository contains supplementary material of the unpublished paper ''Texture Synthesis User Study'' at EG 2017.
+Along with the web interface, this repository contains supplementary material of the paper ''Texture Synthesis User Study'' at EG 2017.
 
 1. exemplar
   * contains exemplars of the 12 selected textures
